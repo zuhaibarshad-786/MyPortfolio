@@ -172,6 +172,15 @@
     background-color: yellowgreen;
     border-radius: 5px;
 }
+.navbar.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    width: 100%;
+    background-color: black;
+    padding: 5px;
+}
 
 /* Hide the menu icon by default */
 .menu-icon {
@@ -206,7 +215,7 @@
 
 /* Skills Section */
 #skills {
-    background-color: #f9f9f9; /* Light background for a clean look */
+    background-color: #f9f9f9; 
     text-align: center;
     padding: 80px 20px;
 }
@@ -687,9 +696,4 @@ footer {
     transform: translateX(-50%);
     border-radius: 2px;
 }
-
-
-
-
-
-
+/* Animations */

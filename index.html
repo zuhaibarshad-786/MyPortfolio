@@ -25,7 +25,9 @@
     .project-card:hover {
       transform: translateY(-10px);
     }
-    </style>
+  
+</style>
+
 
 </head>
 
@@ -41,7 +43,6 @@
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#Education">Education</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#experience">Experience</a></li>
                 </ul>
             </nav>
             <div class="content">
@@ -51,7 +52,7 @@
                     </h3>
                     <p>Web Developer, Web Designer, Frontend Developer</p>
                     <div class="btn">
-                        <button>Let's get Started</button>
+                       <a href="#contact"><button>Let's get Started</button></a>
                     </div>
                 </div>
                 <div class="image-content">
@@ -243,9 +244,31 @@
                 </div>
               </div>
             </div>
+             <!-- Project 4 -->
+             <div class="col-md-4">
+                <div class="card project-card h-100 shadow-lg rounded border-0" style="color: white;">
+                  <img src="gemini.PNG" style="height: 200px;" class="card-img-top" alt="Project 3">
+                  <div class="card-body text-center" style="background-color: #053640;">
+                    <h5 class="card-title">Gemini Chatbot</h5>
+                    <p class="card-text"></p>
+                    <a href="https://huggingface.co/spaces/zohaib51/Gemmini_ChatBot" target="_blank" class="btn custom-btn">View Project</a>
+                  </div>
+                </div>
+              </div>
+                  <!-- Project 5 -->
+             <div class="col-md-4">
+                <div class="card project-card h-100 shadow-lg rounded border-0" style="color: white;">
+                  <img src="VtoV.PNG" style="height: 200px;" class="card-img-top" alt="Project 3">
+                  <div class="card-body text-center" style="background-color: #053640;">
+                    <h5 class="card-title">Voice to Voice Chatbot</h5>
+                    <p class="card-text"></p>
+                    <a href="https://huggingface.co/spaces/zohaib51/VoiceToVoiceChatBot" target="_blank" class="btn custom-btn">View Project</a>
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
-      </section>  
+      </section> 
       <style>
 
         /* Gradient Button */
@@ -281,16 +304,14 @@
                     <button type="submit">Send Message</button>
                 </form>
                 <div class="social-icons">
-                    <a href="#" title="Facebook"><i style="color:blue" class="fab fa-facebook-f"></i></a>
                     <a href="https://www.linkedin.com/in/zohaib-arshad-786zzz/" target="_blank" title="Linkedin"><i style="color: blue;" class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/zuhaibarshad-786" title="Github"><i style="background-color: black;" class="fab fa-github"></i></a>
-                    <a href="#" title="Pinterest"><i class="fab fa-pinterest"></i></a>
                 </div>
             </div>
         </div>
         <footer>
-            © Copyright DevFolio. All Rights Reserved <br>
-            Designed by BootstrapMade
+            © Copyright 2025. All Rights Reserved <br>
+            Designed by Zohaib Arshad
         </footer>
     </section>
 
@@ -315,7 +336,21 @@
             cursorChar: "|", // Customize the cursor character
         });
     });
-    // all animations sections wise
+    // navbar fixed 
+    window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) { // Adjust the scroll threshold as needed
+        navbar.classList.add('fixed');
+    } else {
+        navbar.classList.remove('fixed');
+    }
+});
+
+// Function to toggle the menu on smaller screens
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
     
     </script>
 </body>
