@@ -1352,3 +1352,20 @@ footer {
     }
 }
 /* Animations */
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+  margin: 20px 0;
+  transition: opacity 1s ease, transform 1s ease;
+  opacity: 0; /* Initially invisible */
+  transform: translateY(30px); /* Slight slide down */
+}
+
+section.show {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Slide up */
+}

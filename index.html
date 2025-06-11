@@ -85,7 +85,7 @@
             </div>
             <div class="image-content">
                 <div class="profile-wrapper">
-                    <img src="front-removebg-preview.png" alt="backImage" class="profile-img">
+                    <img src="profile-removebg-preview.png" alt="backImage" class="profile-img">
                     <div class="profile-bg"></div>
                     <div class="tech-bubble bubble-1">Html</div>
                     <div class="tech-bubble bubble-2">Node.js</div>
@@ -109,7 +109,7 @@
                                 <div class="row">
                                     <div class="col-sm-6 col-md-5">
                                         <div class="about-img">
-                                            <img src="WhatsApp_Image_2025-02-14_at_09.25.35_fbd98516-removebg-preview.png" class="img-fluid rounded b-shadow-a" alt="">
+                                            <img src="front-removebg-preview.png" class="img-fluid rounded b-shadow-a" alt="">
                                         </div>
                                     </div>
                                     <div class="col-sm-6 col-md-7">
@@ -405,6 +405,28 @@
                     </div>
                 </div>
             </div>
+            <!-- project 6 -->
+              <div class="project-card">
+                <div class="project-image">
+                    <img src="diabetes.PNG" alt = "Diabetes Prediction">
+                    <div class="project-overlay">
+                        <div class="project-tech">
+                            <span>Zero Trust</span>
+                            <span>AI</span>
+                            <span>Flask_Python</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Diabetes Prediction</h3>
+                    <p>Information security protocols like zero trust with secure authentication,input sanitization and cryptography algorithms implemented. Predict diabetes result based on user input.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/zuhaibarshad-786/DiabetesPrediction" target="_blank" class="project-btn">
+                            <i class="fas fa-microphone-alt"></i> View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -435,10 +457,7 @@
     </section>
 
        <!-- end contact section -->
-    
-
-
-                       
+                        
     <script>
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links');
@@ -499,9 +518,25 @@ document.addEventListener('DOMContentLoaded', function() {
 function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('active');
-}
-    
-    </script>
-</body>
+}  
+// animations on all sections
+// Select all sections
+const sections = document.querySelectorAll('section');
 
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show'); // Animate when in view
+        } else {
+            entry.target.classList.remove('show'); // Reset when out of view (so it triggers again)
+        }
+    });
+}, { threshold: 0.2 }); // Trigger when 20% of section is visible
+
+sections.forEach(section => {
+    observer.observe(section);
+});
+
+</script>
+</body>
 </html>
