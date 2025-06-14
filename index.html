@@ -520,22 +520,6 @@ function toggleMenu() {
     navLinks.classList.toggle('active');
 }  
 // animations on all sections
-// Select all sections
-const sections = document.querySelectorAll('section');
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show'); // Animate when in view
-        } else {
-            entry.target.classList.remove('show'); // Reset when out of view (so it triggers again)
-        }
-    });
-}, { threshold: 0.2 }); // Trigger when 20% of section is visible
-
-sections.forEach(section => {
-    observer.observe(section);
-});
 
 </script>
 </body>
